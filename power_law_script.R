@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------------------------------------------
 #
-# Copyright (c) 2017, by Stefano Gualandi and Giuseppe TOscani, UniPv,
+# Copyright (c) 2017, by Stefano Gualandi and Giuseppe Toscani, UniPv,
 #               via Ferrata, 1, Pavia, Italy, 27100
 #
 # - Additional material for the paper "Pareto tails in socio-economic phenomena: A kinetic description"
