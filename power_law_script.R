@@ -1,11 +1,23 @@
-# FOR A TUTORIAL SEE SECTION 2 in :
-# https://cran.r-project.org/web/packages/poweRlaw/vignettes/b_powerlaw_examples.pdf
+#--------------------------------------------------------------------------------------------------------
+#
+# Copyright (c) 2017, by Stefano Gualandi and Giuseppe TOscani, UniPv,
+#               via Ferrata, 1, Pavia, Italy, 27100
+#
+# - Additional material for the paper "Pareto tails in socio-economic phenomena: A kinetic description"
+# - R script for producing the figure "PopulationPvalues.png"
+#
+#--------------------------------------------------------------------------------------------------------
+
 
 # REQUIRED PACKAGE:
 # https://cran.r-project.org/web/packages/poweRlaw/index.html
 
+# FOR A TUTORIAL SEE SECTION 2 in :
+# https://cran.r-project.org/web/packages/poweRlaw/vignettes/b_powerlaw_examples.pdf
+
 # Load library
 library("poweRlaw", lib.loc="~/R/win-library/3.2")
+
 
 # Make plot for each country
 myplot <- function(country, foo) {
@@ -33,6 +45,7 @@ myplot <- function(country, foo) {
   lines(m_sp, col=2, lwd=3)
 }
 
+# Prepare input data
 foo <- vector(mode="list", length=6)
 names(foo) <- c("usa", "japan", "italia", "polonia", "india", "canada")
 foo[[1]] = "USA"
@@ -42,6 +55,7 @@ foo[[4]] = "Poland"
 foo[[5]] = "India"
 foo[[6]] = "Canada"
 
+# Plot for six countries
 par(mfrow = c(3, 2))  # 3 rows and 2 columns
 for (i in c("usa", "japan", "italia", "polonia", "india", "canada")) {
   myplot(i, foo)
